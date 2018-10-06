@@ -102,7 +102,7 @@ The steps are as follow:
         - divide the noise scale by a factor of 2
     - Else:
         - multiply the noise scale by a factor of 2
-5. Repeat step 1. through 4. until convergence.
+5. Repeat step 3. and 4. until convergence.
 
 Implemented in Python the training algorithm is: 
 
