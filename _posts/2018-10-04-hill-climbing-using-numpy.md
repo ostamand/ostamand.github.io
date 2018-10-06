@@ -156,7 +156,54 @@ def train_hill_climbing(env, agent,
 
 ```
 
+# Results
 
+After training, I found the following weights.
+
+$$ 
+[W] = 
+\begin{bmatrix}
+    8.52 & 7.95   \\
+    9.14 & 10.48  \\
+    9.68 & 12.51  \\
+    8.81 & 14.59
+\end{bmatrix}
+$$
+
+Which means that, given a state, the probability of taken either actions is  calculated as follow.
+
+$$
+
+x_{0} = 8.52 * \text{cart_position} + 9.14 * \text{cart_velocity} + 9.68 * \text{pole_angle} + 8.81 * \text{pole_velocity} \\
+
+x_{1} = 7.95 * \text{cart_position} + 10.48 * \text{cart_velocity} + 12.51 * \text{pole_angle} + 14.59 * \text{pole_velocity}
+
+$$
+
+Finally, applying the softmax function to get the probabilities.
+
+$$
+\sigma(x) = [e^{x_{0}}/(e^{x_{0}}+e^{x_{1}}),e^{x_{1}}/(e^{x_{0}}+e^{x_{1}})]\\
+$$
+
+For example, given the state
+
+$$
+[S] =
+\begin{bmatrix}
+    0.018  & -0.012 & 0.046 & -0.02 
+\end{bmatrix}
+$$
+
+then 
+
+$$
+x_{0} = 8.52 * (0.018) + 9.14 * (-0.012) + 9.68 * (0.046) + 8.81 * (-0.02) = 0.31  \\
+x_{1} = 7.95 * (0.018)  + 10.48 * (-0.012) + 12.51 * (0.046)  + 14.59 * (-0.02) = 0.30 \\
+\sigma(x) = [e^{0.31}/(e^{0.31}+e^{0.30}),e^{0.30}/(e^{0.31}+e^{0.30})] = [0.497, 0.503]\\
+$$
+
+Which means that, for that particular state, the policy determined that either action 0 or 1 can be taken. 
 
 
 
