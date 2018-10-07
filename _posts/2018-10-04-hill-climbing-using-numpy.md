@@ -7,6 +7,8 @@ math: true
 
 # Introduction
 
+![agent](/assets/agent_cartpole-v0.gif)
+
 [CartPole-v0](https://gym.openai.com/envs/CartPole-v0/) is a simple environment where the state space consists of the cart position, cart velocity, pole angle and pole velocity at tip.
 
 Two discrete actions are available to the agent.
@@ -152,7 +154,7 @@ def train_hill_climbing(env, agent,
                 agent.w = best_w
                 break
             
-            t.set_postfix(noise=noise_scale, Score=np.mean(scores))
+            t.set_postfix(noise=noise_scale, Score=current_score)
 
 ```
 
@@ -203,7 +205,7 @@ x_{1} = 7.95 * (0.018)  + 10.48 * (-0.012) + 12.51 * (0.046)  + 14.59 * (-0.02) 
 \sigma(x) = [e^{0.31}/(e^{0.31}+e^{0.30}),e^{0.30}/(e^{0.31}+e^{0.30})] = [0.497, 0.503]\\
 $$
 
-Which means that, for that particular state, the policy determined that either action 0 or 1 can be taken. 
+Therefore, for that particular state, the policy determined that either action 0 or 1 can be taken. Imagine that the pole is vertical with a minimal velocity at the tip, then, either actions will maximize expected cumulative reward. 
 
 
 
