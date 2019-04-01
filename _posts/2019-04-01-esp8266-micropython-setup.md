@@ -58,7 +58,7 @@ import webrepl_setup
 8. Connect to the device using: http://micropython.org/webrepl/.
 
 9. Use the "send a file" button to export files to the ESP8266. The ```main.py``` file will be automatically executed when the board loads up. For example, create a ```main.py``` file with the content below and export it to the board using WebREPL. After rebooting the ESP8266, a red led should be flashing. 
-```Python
+```
 import machine 
 import time 
 
@@ -75,13 +75,13 @@ while True:
 
 Although using the WebREPL to transfer files does work it is somewhat cumbersome. Therefore, I prefer to use ampy.
 
-1. Install ampy
+1. Install ampy.
 ```
 pip install adafruit-ampy
 ```
 
 2. Create a file name ```test.py``` with the following content.
-```Python
+```
 print('Hello World!')
 ```
 
