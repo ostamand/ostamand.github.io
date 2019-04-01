@@ -41,7 +41,8 @@ screen /dev/tty.SLAB_USBtoUART 115200
 ```
 
 5. Check if we can flash the LED attached to GPIO0.
-```
+
+```Python
 import machine 
 pin = machine.Pin(0, machine.Pin.OUT)
 pin.on()
