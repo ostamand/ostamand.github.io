@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ESP8266 MicroPython setup"
+title:  "ESP8266 MicroPython Setup"
 categories: micropython
 math: true
 ---
@@ -80,12 +80,12 @@ Although using the WebREPL to transfer files does work it is somewhat cumbersome
 pip install adafruit-ampy
 ```
 
-2. Create a file name ```test.py``` with the following content.
+2. Create a file name `test.py` with the following content.
 ```
 print('Hello World!')
 ```
 
-3. Run this file on the board using ampy. It will wait for all the code to be executed before displaying all the outputs to the console. To not wait before returning use the ```--no-output``` option (for example, useful in the case of a while loop). The running outputs can be accessed through a standard REPL screen.
+3. Run this file on the board using ampy. It will wait for all the code to be executed before displaying all the outputs to the console. To not wait before returning use the `--no-output` option (for example, useful in the case of a while loop). The running outputs can be accessed through a standard REPL screen.
 ```
 ampy --port /dev/tty.SLAB_USBtoUART run test.py
 ```
