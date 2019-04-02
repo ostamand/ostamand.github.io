@@ -32,19 +32,19 @@ pip3 install esptool
 ls /dev/tty*
 ```
 
-3. Erase the flash memory and deploy the new firmware:
+4. Erase the flash memory and deploy the new firmware:
 
 ```
 esptool.py --port /dev/tty.SLAB_USBtoUART erase_flash
 esptool.py --port /dev/tty.SLAB_USBtoUART --baud 460800 write_flash --flash_size=detect 0 bin/esp8266-20190125-v1.10.bin
 ```
-4. Use `screen` as a terminal emulator to connect to the board now running MicroPython. You should see `>>>` indicating that you are now connected to the REPL.
+5. Use `screen` as a terminal emulator to connect to the board now running MicroPython. You should see `>>>` indicating that you are now connected to the REPL.
 
 ```
 screen /dev/tty.SLAB_USBtoUART 115200
 ```
 
-5. Check if we can flash the LED attached to GPIO0.
+6. Check if we can flash the LED attached to GPIO0.
 
 ```Python
 import machine 
@@ -53,17 +53,17 @@ pin.on()
 pin.off()
 ```
 
-6. While still connected to the REPL, setup WebREPL.
+7. While still connected to the REPL, setup WebREPL.
 
 ```
 import webrepl_setup
 ```
 
-7. Reboot the device and connect to the MicroPython-XXXXXX access point using the default password micropythoN. 
+8. Reboot the device and connect to the MicroPython-XXXXXX access point using the default password micropythoN. 
 
-8. Connect to the device using: http://micropython.org/webrepl/.
+9. Connect to the device using: http://micropython.org/webrepl/.
 
-9. Use the "send a file" button to export files to the ESP8266. The `main.py` file will be automatically executed when the board loads up. For example, create a `main.py` file with the content below and export it to the board using WebREPL. After rebooting, a red led should again be flashing. 
+10. Use the "send a file" button to export files to the ESP8266. The `main.py` file will be automatically executed when the board loads up. For example, create a `main.py` file with the content below and export it to the board using WebREPL. After rebooting, a red led should again be flashing. 
 
 ```Python
 import machine 
