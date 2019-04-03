@@ -46,7 +46,7 @@ screen /dev/tty.SLAB_USBtoUART 115200
 
 Check if we can flash the LED attached to GPIO0.
 
-```Python
+```python
 import machine 
 pin = machine.Pin(0, machine.Pin.OUT)
 pin.on()
@@ -55,7 +55,7 @@ pin.off()
 
 While still connected to the REPL, setup WebREPL.
 
-```
+```python
 import webrepl_setup
 ```
 
@@ -65,7 +65,7 @@ Connect to the device using: http://micropython.org/webrepl/.
 
 Use the "send a file" button to export files to the ESP8266. The `main.py` file will be automatically executed when the board loads up. For example, create a `main.py` file with the content below and export it to the board using WebREPL. After rebooting, a red led should again be flashing. 
 
-```Python
+```python
 import machine 
 import time 
 
@@ -90,7 +90,7 @@ pip install adafruit-ampy
 
 Create a file named `test.py` with a print statement.
 
-```
+```python
 print('Hello World!')
 ```
 
