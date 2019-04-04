@@ -5,7 +5,7 @@ categories: rl
 math: true
 ---
 
-# Introduction
+## Introduction
 
 ![agent](/assets/agent_cartpole-v0.gif)
 
@@ -16,7 +16,7 @@ Two discrete actions are available to the agent.
 - 0, push cart to the left 
 - 1, push cart to the right 
 
-# Stochastic Policy
+## Stochastic Policy
 
 In the following, we will use a stochastic policy to solve the environment.
 
@@ -85,7 +85,7 @@ class Agent():
         return np.random.choice(self.action_size, p=probs)
 ```
 
-# Training 
+## Training 
 
 The policy will be trained using hill climbing with adaptive noise scaling (a kind of black box optimization where we don't need to calculate the gradients). Before we go into the details, a simple reminder. The discounted return ($G$) is defined as:
 
@@ -158,7 +158,7 @@ def train_hill_climbing(env, agent,
 
 ```
 
-# Results
+## Results
 
 After training, I found the following weights.
 
