@@ -9,13 +9,11 @@ math: true
 
 I used CircuitPython for my last project and I have to say I really enjoyed it. For my next one, I wanted to use some [Adafruit Feather HUZZAH with ESP8266](https://www.adafruit.com/product/2821) laying arround. Unfortunately, they are not compatible with CirtuitPython. Therefore, I decided to give a try at [MicroPython](http://www.micropython.org/). 
 
-This post is a concise summary of the development setup I am using.
+This post is a concise summary of the development setup I am using on a mac.
 
 Let's start.
 
 # MicroPython Setup 
-
-Steps below are for a mac.
 
 Download MicroPython firmware ([link](http://micropython.org/download#esp8266)).
 
