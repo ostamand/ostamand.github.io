@@ -53,5 +53,6 @@ This breadboard layout is then put on a stripboard.
 
 The final board, after soldering and testing is shown below. 
 
+WORK IN PROGRESS
 
 

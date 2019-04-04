@@ -17,7 +17,7 @@ title: Olivier St-Amand blog
 #email: olivier.st-amand.1@gmail.com
 google_analytics: UA-131079580-1
 description: >- # this means to ignore newlines until "baseurl:"
-  Making computers do what I want
+  Making computers do what I want.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
