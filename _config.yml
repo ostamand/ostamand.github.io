@@ -25,7 +25,7 @@ github_username: ostamand
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-clean-blog
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 # Exclude from processing.
